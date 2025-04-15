@@ -1,0 +1,145 @@
+.container {
+    padding: 20px;
+  }
+    
+  .pro1{
+    width: 10vw !important;
+    /* border: 2px solid blue; */
+  }
+  .pro1 img{
+    height: 15vh;
+  }
+  /* Product card */
+  .card{
+    /* border: 2px solid blue !important; */
+    width: 11vw;
+    color: black;
+    padding: 0.5rem;
+    border: none;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  .cardBody{
+    color: black;
+  }
+  /* Product image */
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  /* Card body */
+  .card-body {
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+  }
+  h1{
+    font-size: 2rem !important;
+  }
+  /* Product title */
+  .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  /* Product price */
+  .card-text {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  Category text
+  .text-muted {
+    font-size: 0.9rem;
+    color: #777;
+  }
+
+  h1{
+    font-size: 2em;
+}
+
+p{
+    font-size: 1em;
+}
+  
+  /* Additional images */
+  .image-container {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+  }
+  
+  .image-container img {
+    width: 50px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .image-container img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .card {
+        border: none;
+        /* border: 2px solid blue; */
+        width: fit-content;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
+      .cardImgTop{
+        width: 100%;
+        height: 15vh;
+        
+      }
+    .card-text {
+      font-size: 4.2rem; /* Adjust to be readable */
+    }
+  
+    .image-container img {
+      width: 60px;
+      height: 5vh;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+
+    p{
+        font-size: 2rem;
+    }
+    .container{
+      /* display: flex; */
+      /* border: 2px solid blue; */
+      /* flex-direction: column-reverse; */
+      /* gap: 10rem;  */
+    }
+    .pro1{
+      display: flex;
+      flex-direction: row;
+      height: 11vh;
+      /* border: 2px solid red; */
+      margin-right: 2rem;
+      width: fit-content !important;
+    }
+    .pro1 img{
+      height: 7vh;
+    }
+  }
+  
+p{
+  /* margin: 0 !important; */
+}

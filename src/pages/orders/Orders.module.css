@@ -1,0 +1,75 @@
+.ordersHeading {
+    font-family: 'Figtree';
+    font-size: 1.4em;
+    font-weight: 600;
+  }
+  
+  .ordersList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .orderCard {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+  }
+  
+  .orderId {
+    margin-bottom: 0.2em;
+    font-family: 'Figtree';
+    font-weight: 600;
+    font-size: 1.4em;
+  }
+  
+  .orderDate {
+    color: #2d2d2d;
+    margin-bottom: 1rem;
+    font-family: 'Figtree';
+    font-weight: 300;
+  }
+  .orderDetailHeading{
+    font-family: 'Figtree';
+    font-weight: 600;
+    font-size: 1.3em;
+    margin-bottom: 0.2em;
+  }
+  .error {
+    color: red;
+    text-align: center;
+    margin-top: 1rem;
+  }  
+  @media all and (max-width:600px) {
+    .ordersHeading {
+      margin-top: 14vh;
+      font-size: 3.4em;
+      font-weight: 600;
+    }
+    .ordersList p,li,strong{
+      /* font-size: 4rem; */
+    }
+    .orderId{
+      font-size: 3rem;
+    }
+    .orderDate{
+      font-size: 3rem;
+    }
+    .order{
+      font-size: 3rem;
+    }
+    .orderDetailHeading{
+      font-size: 3rem;
+    }
+    .orderdetailPara{
+      font-size: 3rem;
+    }
+    .orderdetailstrong{
+      font-size: 3rem;
+    }
+    .orderdetailli{
+      font-size: 3rem;
+    }
+  }

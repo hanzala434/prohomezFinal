@@ -1,0 +1,33 @@
+.suggestedProductCard{
+    /* border: 2px solid blue; */
+    width: 15vw;
+    line-height: 2vh;
+    text-decoration: none !important;
+}
+.suggestedProductsGrid{
+    display: flex;
+    gap: 1rem;
+    padding-left: 5%;
+}
+.suggestedProductsGrid img{
+    height: 15vh;
+    width: 80%;
+}
+.suggestedProductsSection h3{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 2%;
+}
+@media all and (max-width:600px) {
+    .suggestedProductCard{
+        height: 15vh;
+        width: 15vw;
+    }
+    .suggestedProductCard img{
+        height: 7vh;
+        width: 100%;
+    }
+    .suggestedProductsSection h3{
+        font-size: 2.6rem;
+    }
+}
