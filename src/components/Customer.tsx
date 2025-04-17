@@ -19,14 +19,18 @@ const Customer: React.FC<Props> = ({ isAdmin }) => {
     const fetchCustomers = async () => {
       try {
         const res = await axios.get<Customer[]>(`${import.meta.env.VITE_PROHOMEZ_BACKEND_URL}/customersdata`);
-        setCustomers(res.data);
+        console.log(res);
+
+        setCustomers(res.data.data);
       } catch (error) {
         console.error('Error fetching customer data:', error);
       }
     };
 
     fetchCustomers();
+
   }, []);
+
 
   return (
     <div className="p-4">

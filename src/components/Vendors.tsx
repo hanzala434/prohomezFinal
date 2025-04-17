@@ -39,7 +39,7 @@ function Vendors({ category }: ExploreProductProps) {
                         </h3>
                     </div>
                     {category === "All" && (
-                        <div className="col-md-12 mt-4">
+                        <div className="col-md-12 mt-4 mb-4">
                             <div className="d-flex justify-content-center">
                                 {categoryBtns.map((item, index) => (
                                     <button

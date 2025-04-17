@@ -32,10 +32,10 @@ function ProductList({ content }: ProductListProp) {
   return (
     <div className={`${styles.productList} d-flex`}>
       <div className={styles.a}>
-        <img className="h-[15rem] w-[15rem]" src={`${import.meta.env.VITE_PROHOMEZ_BACKEND_URL}/images/${content.featureImage}`} alt={content.productName || 'Pro Homez'} />
+        <img className={styles.mainImage} src={`${import.meta.env.VITE_PROHOMEZ_BACKEND_URL}/images/${content.featureImage}`} alt={content.productName || 'Pro Homez'} />
       </div>
       <div className={styles.productInfoBox}>
-        <h3 className={`${styles.productInfoBoxName} mb-0`}>{content.productName}</h3>
+        <h1 className={`${styles.productInfoBoxName} mb-0`}>{content.productName}</h1>
         <p className={`${styles.productInfoBoxDescription} mb-0`}>
             {truncateDescription(content.productDescription, 35)}
         </p>
