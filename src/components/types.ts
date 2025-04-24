@@ -109,3 +109,35 @@ export interface Vendor {
   store_phone: string,
   vendor_status: string;
 }
+
+export interface Comment {
+  id: number;
+  post_id: number;
+  user_id: number;
+  comment: string;
+  created_at: string;
+}
+
+export interface Post {
+  id: number;
+  store_id: number;
+  image: string;
+  productDescription: string;
+  productName: string;
+  productId: number;
+  featureImage: string;
+  totalLikes?: number;
+  comments?: Comment[];
+}
+
+interface PostsState {
+  items: Post[];
+  status: 'idle' | 'loading' | 'succeeded' | 'failed';
+  error: string | null;
+}
+
+const initialState: PostsState = {
+  items: [],
+  status: 'idle',
+  error: null,
+};

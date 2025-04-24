@@ -8,6 +8,7 @@ import { fetchVendorProducts } from '../features/products/productSlice';
 
 interface VendorSidebarMainProps {
   isAdmin: boolean;
+  store_id:string;
 }
 
 function  VendorDashboardProducts({ isAdmin }: VendorSidebarMainProps) {

@@ -25,6 +25,7 @@ import axios from 'axios';
 import Vendors from './components/Vendors.tsx';
 import About from './pages/About/About.tsx';
 import VendorProfilePage from './pages/VendorProfilePage/VendorProfilePage.tsx';
+import Feed from './pages/Feed/Feed.tsx';
 const API_BASE = import.meta.env.VITE_PROHOMEZ_BACKEND_URL;
 
 console.warn = () => {}; 
@@ -69,6 +70,11 @@ const router = createBrowserRouter([
       {
         path: '/vendorprofile',
         element: <Vendors />,
+      }
+      ,
+      {
+        path: '/feed',
+        element: <Feed />,
       }
       ,
 

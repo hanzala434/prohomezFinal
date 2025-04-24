@@ -48,6 +48,9 @@ function Header() {
             <NavLink to="/contact" className={styles.navbarNavLink}>
               Contact
             </NavLink>
+            <NavLink to="/feed" className={styles.navbarNavLink}>
+              Feed
+            </NavLink>
           </nav>
 
            {/* Logo */}

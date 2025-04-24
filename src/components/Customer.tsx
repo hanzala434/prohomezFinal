@@ -7,6 +7,7 @@ type Customer = {
   email: string;
   phone: string;
   address: string;
+  
 };
 type Props = {
   isAdmin: boolean;

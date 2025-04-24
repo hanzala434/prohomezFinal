@@ -7,6 +7,8 @@
   import { useDispatch, useSelector } from 'react-redux';
   import { createProduct, fetchVendorDetails, fetchVendorProducts } from '../features/products/productSlice.ts';
   import { AppDispatch, RootState } from '../store/store.ts';
+import { createPost } from '../features/posts/postsSlice.ts';
+import avatar from '../assets/images/avatar.png'
 
   function CreateProduct() {
     const [selectedImages, setSelectedImages] = useState<string[]>([]);
@@ -48,14 +50,12 @@
 
     // Vendor details from Redux
     const vendor = useSelector((state: RootState) => state.products.vendorDetails);
-    const [isRealEstate, setIsRealEstate] = useState(false);
 
+    const [isRealEstate, setIsRealEstate] = useState(false);
     useEffect(() => {
       dispatch(fetchVendorDetails());
-      if (vendor?.brand_type === 'Real Estate') {
-        setIsRealEstate(true);
-      }
-    }, [dispatch, vendor]);
+    }, [dispatch]);
+    
 
     const validateFields = () => {
       const newErrors: any = {};
@@ -85,7 +85,7 @@
           ? prev.filter((item) => item !== amenity) // Remove if already selected
           : [...prev, amenity] // Add if not selected
       );
-      console.log(selectedAmenities)
+      // console.log(selectedAmenities)
     };
     
 
@@ -106,9 +106,24 @@
         propertyArea,
         selectedAmenities,
       };
+      const postData = {
+        store_id:vendor?.store_id,
+        productName,
+        store_name:vendor?.store_name,
+        productDescription,
+        featureImage: selectedImages[0], // or you can allow user to choose
+        image: vendor?.image ? vendor.image : "/images/sample-profile.jpg", 
+      };
+  
 
+    
       try {
+        // console.log(posts);
+
+        console.log(postData);
+        await dispatch(createPost(postData)).unwrap();
         await dispatch(createProduct(productData)).unwrap();
+
         await dispatch(fetchVendorProducts());
         navigate('/vendor-dashboard/products', {
           state: { message: 'New product has been added successfully.' },

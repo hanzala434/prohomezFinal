@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-import { Product, Vendor } from '../../components/types';
+import { Product, Vendor,VendorDetail } from '../../components/types';
 import { RootState } from '../../store/store';
 import { AxiosError } from "axios";
 
